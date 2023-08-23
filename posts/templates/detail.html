@@ -10,7 +10,9 @@
         {{post.content}}
       </div>
       <div class="card-footer">
-        {{post.created_at}}
+        <p>{{post.created_at}}</p>
+        <a href="{% url 'posts:delete' id=post.id %}" class="btn-danger"?delete>delete</a>
+        <a href="{% url 'posts:edit' id=post.id %}" class="btn btn-warning">edit</a>
       </div>
    </div>
    
